@@ -15,7 +15,6 @@ body{
     justify-content: center;
     background-size: cover;
     background-size: cover;
-    background-position: 50%;
 }
 .banner:hover {
     filter: grayscale(0.5) ;

@@ -72,6 +72,6 @@ function fechar() {
     mediaStream = null
     const cameraDiv = document.getElementById('cameraDiv')
     cameraDiv.style.display = 'none'
-    main.style.display = 'block'
+    main.style.display = 'block '
 }
 
