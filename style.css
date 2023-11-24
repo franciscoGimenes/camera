@@ -19,13 +19,16 @@ body{
 .banner:hover {
     filter: grayscale(0.5) ;
 }
-.fotoPerfil img{
+.fotoPerfil{
     width: 240px;
     height: 240px;
     border-radius: 275px;
     border: 3px solid #4747D9;
+    background-position: 50%;
+    background-size: cover;
+
 }
-.fotoPerfil img:hover{
+.fotoPerfil:hover{
     filter: grayscale(0.5) ;
 }
 .infosPessoais{

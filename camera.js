@@ -1,5 +1,7 @@
 const divBanner = document.getElementById('banner')
 const main = document.getElementById('main')
+let locFoto
+const marcacao = document.getElementById('marcar')
 
 divBanner.addEventListener('mouseenter', () =>{
 
@@ -19,7 +21,8 @@ divBanner.addEventListener('mouseleave', () =>{
 
 var mediaStream
 
-function abrirCamera() {
+function abrirCamera(parametro) {
+    locFoto = parametro
     const cameraDiv = document.getElementById('cameraDiv')
     cameraDiv.style.display = 'flex'
 
@@ -35,11 +38,16 @@ function abrirCamera() {
             console.error('Erro ao acessar a câmera', error)
         })
 
-    
+        if(locFoto == 'banner'){  
+            marcacao.style.display = 'block'
+        }else{
+            marcacao.style.display = 'none'  
+        }
     main.style.display = 'none'
 }
 
 function tirarFoto(){
+
 
     const areaVideo = document.getElementById('camera')
     const canvas = document.createElement('canvas')
@@ -52,8 +60,15 @@ function tirarFoto(){
     const imageDataURL = canvas.toDataURL()
 
     // Armazenando a imagem no background da div 
-    const fotoDiv = document.getElementById('banner')
-    fotoDiv.style.backgroundImage = `url(${imageDataURL})`  
+    if(locFoto == 'banner'){
+        const fotoDiv = document.getElementById('banner')
+        fotoDiv.style.backgroundImage = `url(${imageDataURL})`  
+        marcacao.style.display = 'block'
+    }else{
+        marcacao.style.display = 'none'
+        const fotoDiv = document.getElementById('fotoPerfil')
+        fotoDiv.style.backgroundImage = `url(${imageDataURL})`  
+    }
 
 
     // const downloadLink = document.createElement('a')

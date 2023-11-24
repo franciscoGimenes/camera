@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
         #camera{
-           background-color: aqua;
+           background-color: #4747D9;
            width: 800px;
         }
         #cameraDiv{
@@ -15,7 +15,7 @@
             display: flex;
             flex-direction: column;
             align-items: end;
-            background-color: brown;
+            background-color: #4747D9;
             position: absolute;
             right: 0;
             display: none;
@@ -39,11 +39,11 @@
     </div>
     <main id="main">
         <div class="container">
-            <div onclick="abrirCamera()" id="banner" class="banner"><img src="https://cdn-icons-png.flaticon.com/512/685/685655.png" alt="" id="camBanner"></div>
+            <div onclick="abrirCamera('banner')" id="banner" class="banner"><img src="https://cdn-icons-png.flaticon.com/512/685/685655.png" alt="" id="camBanner"></div>
             <div class="main">
                 <div class="pessoa">
-                    <div class="fotoPerfil">
-                        <img src="pessoa.png" alt="foto de perfil">
+                    <div id="fotoPerfil" class="fotoPerfil" onclick="abrirCamera('perfil')">
+
                     </div>
                     <div class="infosPerfil">
                         <div class="infosPessoais">
