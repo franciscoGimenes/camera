@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de projetos - Augebit</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #camera{
+           background-color: aqua;
+           width: 800px;
+        }
+        #cameraDiv{
+            margin-right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            background-color: brown;
+            position: absolute;
+            right: 0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="cameraDiv">
+        <video id="camera" autoplay></video>
+        <div>
+            <button onclick="tirarFoto()">Tirar Foto</button>
+            <button onclick="fechar()">Fechar Camera</button>
+        </div>
+    </div>
+    <main id="main">
+        <div class="container">
+            <div onclick="abrirCamera()" id="banner" class="banner"><img src="https://cdn-icons-png.flaticon.com/512/685/685655.png" alt="" id="camBanner"></div>
+            <div class="main">
+                <div class="pessoa">
+                    <div class="fotoPerfil">
+                        <img src="pessoa.png" alt="foto de perfil">
+                    </div>
+                    <div class="infosPerfil">
+                        <div class="infosPessoais">
+                            <p id="nome">Chiquinho</p>
+                            <p id="email">fcgn13@gmail.com</p>
+                        </div>
+                        <div class="estatisticas">
+                            <p class="estatistica" id="projetosCompletos">Projetos completos:<span class="estaBold">8</span></p>
+                            <p class="estatistica" id="projetosCompletos">Projetos completos:<span class="estaBold">8</span></p>
+                            <p class="estatistica" id="projetosCompletos">Projetos completos:<span class="estaBold">8</span></p>
+                            <p class="estatistica" id="projetosCompletos">Projetos completos:<span class="estaBold">8</span></p>
+                            <p class="estatistica" id="projetosCompletos">Projetos completos:<span class="estaBold">8</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="meusProjetos">
+                    <div class="meuProjeto">
+                        <h2 class="titulo">Meus Projetos</h2>
+                        <div class="projetosAndamento">
+                            <div class="projeto" id="projeto1"></div>
+                            <div class="projeto" id="projeto2"></div>
+                            <div class="projeto" id="projeto3"></div>
+                            <div class="projeto" id="projeto4"></div>
+                            <div class="projeto" id="projeto5"></div>
+                            <div class="projeto" id="projeto6"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="camera.js"></script>
+</body>
+</html>
